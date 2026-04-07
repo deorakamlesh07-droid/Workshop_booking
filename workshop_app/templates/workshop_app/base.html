@@ -17,12 +17,14 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.3/Chart.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
 
-
     {% block extra-dependencies %}
     {% endblock %}
 
     <link rel="stylesheet" href="{% static 'workshop_app/css/bootstrap.min.css' %}">
     <link rel="stylesheet" href="{% static 'workshop_app/css/toastr.min.css' %}">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@500;600;700;800&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link rel="stylesheet" href="{% static 'workshop_app/css/base.css' %}" type="text/css"/>
     <link rel="stylesheet" href="{% static 'workshop_app/css/font-awesome.css' %}" type="text/css"/>
@@ -30,16 +32,21 @@
 
     {% block extra-custom-scripts %}
     {% endblock %}
-
 </head>
 
 <body>
 {% block header %}
     <nav class="navbar navbar-dark navbar-expand-lg bg-dark fixed-top">
         {% if user.is_authenticated %}
-        <a class="navbar-brand text-white" href="{% url 'workshop_app:index' %}">FOSSEE Workshops</a>
+        <a class="navbar-brand text-white" href="{% url 'workshop_app:index' %}">
+            <span class="brand-kicker">Workshop Portal</span>
+            <span>FOSSEE Workshops</span>
+        </a>
         {% else %}
-        <a class="navbar-brand text-white" href="{{request.scheme}}://{{request.get_host}}">FOSSEE Workshops</a>
+        <a class="navbar-brand text-white" href="{{request.scheme}}://{{request.get_host}}">
+            <span class="brand-kicker">Workshop Portal</span>
+            <span>FOSSEE Workshops</span>
+        </a>
         {% endif %}
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
                 aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -68,7 +75,7 @@
                 </li>
                 {% endif %}
                 <li class="nav-item">
-                    <a class="nav-link text-white" href="{% url 'workshop_app:workshop_status_instructor' %}">
+                    <a class="nav-link text-white" href="{% if request.user|has_group:'instructor' %}{% url 'workshop_app:workshop_status_instructor' %}{% else %}{% url 'workshop_app:workshop_status_coordinator' %}{% endif %}">
                         Workshop Status
                     </a>
                 </li>
@@ -90,10 +97,10 @@
                     <li class="nav-item dropdown">
                         <a class="nav-link dropdown-toggle text-white" href="#" id="navbarDropdown" role="button"
                            data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                           <span class="material-icons" style="vertical-align: middle">account_circle</span>
-                            <p style="display: inline; vertical-align: middle">
+                           <span class="material-icons align-middle">account_circle</span>
+                            <span class="align-middle">
                                 {{user.get_full_name|title}}
-                            </p>
+                            </span>
                         </a>
                         <div class="dropdown-menu" aria-labelledby="navbarDropdown">
                             <a class="dropdown-item" href="{% url 'workshop_app:view_own_profile' %}">Profile</a>
@@ -110,11 +117,13 @@
     </nav>
 {% endblock %}
 
-<div class="base-content">
-    {% block content %}
-        <h1>Base Template Content. Please override me</h1>
-    {% endblock %}
-</div>
+<main class="base-content">
+    <div class="page-shell">
+        {% block content %}
+            <h1>Base Template Content. Please override me</h1>
+        {% endblock %}
+    </div>
+</main>
 
 <script>
     {% if messages %}
@@ -129,7 +138,7 @@
     {% block footer %}
        <div class="container">
            Developed by FOSSEE group, IIT Bombay
-       </div> 
+       </div>
     {% endblock %}
 </footer>
 </html>

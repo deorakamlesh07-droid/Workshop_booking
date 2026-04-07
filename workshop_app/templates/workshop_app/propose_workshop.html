@@ -28,7 +28,6 @@
                 beforeShowDay: $.datepicker.noWeekends,
             });
 
-
             $('#disp_tnc').click(function (e) {
                 e.preventDefault()
                 if ($('#id_workshop_type').val() === '')
@@ -46,62 +45,62 @@
     </script>
 {% endblock %}
 
-
 {% block content %}
     <style type="text/css">
         .errorlist {
-            color: red;
+            color: #b42318;
         }
 
-    .modal-open .modal{
-        overflow-y: hidden;
-    }
+        .modal-open .modal {
+            overflow-y: hidden;
+        }
     </style>
 
-    <div class="container" align="center">
-        <div class="alert alert-info">
-            Note: Before proposing the workshop, please check about the workshop in the
-            <strong>Workshop Types</strong> section
-        </div>
-        <br><br>
-        <div class="col-md-6 col-md-offset-6">
-            <div class="card border-primary">
-                <div class="card-header">
-                    <h3>Propose Workshop</h3>
-                </div>
-                <div class="card-body">
-                    <div class="form-group">
-                        <form method="post">
-                            {% csrf_token %}
-                            <br/>
-                            {{ form.workshop_type }}
-                            <br>
-                            {{ form.date }}
-                            <br>
-                            {{ form.tnc_accepted }} I accept the
-                            <a href="#" id="disp_tnc" data-toggle="modal"
-                            data-target="#exampleModalCenter">
-                                terms and conditions
-                            </a>
-                            <br>
-                            {% if form.errors %}
-                                <br>
-                                <div style="text-align: left; border: 1px solid red; padding-top: 5px">
-                                    <h5 style="text-align: center; color: red; font-weight: bolder">Errors</h5>
-                                    {{ form.errors }}
-                                </div>
-                            {% endif %}
-                            <br>
-                            <button class="btn btn-success" type="submit">Submit</button>
-                        </form>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <br>
+    <section class="page-hero">
+        <h1>Propose a Workshop</h1>
+        <p>Choose a workshop type, pick a date, and confirm the terms in a form designed to be easier to finish from a phone.</p>
+    </section>
 
+    <div class="alert alert-info">
+        Note: Before proposing the workshop, please review the workshop details in the
+        <strong>Workshop Types</strong> section.
     </div>
-    <!-- Modal -->
+
+    <section class="surface-card mx-auto" style="max-width: 720px;">
+        <div class="card-header">
+            Submit Request
+        </div>
+        <div class="card-body">
+            <form method="post">
+                {% csrf_token %}
+                <div class="form-group">
+                    <label for="{{ form.workshop_type.id_for_label }}">Workshop Type</label>
+                    {{ form.workshop_type }}
+                </div>
+                <div class="form-group">
+                    <label for="{{ form.date.id_for_label }}">Preferred Date</label>
+                    {{ form.date }}
+                </div>
+                <div class="form-group form-check px-0">
+                    {{ form.tnc_accepted }}
+                    <label class="form-check-label ml-4" for="{{ form.tnc_accepted.id_for_label }}">
+                        I accept the
+                        <a href="#" id="disp_tnc" data-toggle="modal" data-target="#exampleModalCenter">
+                            terms and conditions
+                        </a>
+                    </label>
+                </div>
+                {% if form.errors %}
+                    <div class="alert alert-danger">
+                        <strong>Please review the highlighted fields before submitting.</strong>
+                        {{ form.errors }}
+                    </div>
+                {% endif %}
+                <button class="btn btn-success btn-block" type="submit">Submit</button>
+            </form>
+        </div>
+    </section>
+
     <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog"
          aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
         <div class="modal-dialog modal-dialog-centered" role="document">

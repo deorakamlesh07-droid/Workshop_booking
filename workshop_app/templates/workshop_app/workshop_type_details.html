@@ -5,28 +5,29 @@
 {% endblock %}
 
 {% block content %}
-    <div class="container">
-        <h2 class="text-center m-3">Workshop Details</h2>
-        <table class="table table-hover">
-            <tr class="d-flex">
-                <th class="col-3">Workshop Name :</th>
-                <td class="col">{{ workshop_type.name }}</td>
-            </tr>
-            <tr class="d-flex">
-                <th class="col-3">Duration :</th>
-                <td class="col">{{ workshop_type.duration }} day(s)</td>
-            </tr>
-            <tr class="d-flex">
-                <th class="col-3">Description :</th>
-                <td class="col">{{ workshop_type.description }}</td>
-            </tr>
-            <tr class="d-flex">
-                <th class="col-3">Terms and Conditions :</th>
-                <td class="col">{{ workshop_type.terms_and_conditions }}</td>
-            </tr>
-        </table>
-    </div>
+    <section class="page-hero">
+        <h1>Workshop Details</h1>
+        <p>Important information is grouped into clear rows so students can review content comfortably without horizontal scrolling.</p>
+    </section>
 
+    <section class="surface-card">
+        <div class="surface-card-body info-list">
+            <div class="info-row">
+                <div class="info-label">Workshop Name</div>
+                <div>{{ workshop_type.name }}</div>
+            </div>
+            <div class="info-row">
+                <div class="info-label">Duration</div>
+                <div>{{ workshop_type.duration }} day(s)</div>
+            </div>
+            <div class="info-row">
+                <div class="info-label">Description</div>
+                <div>{{ workshop_type.description }}</div>
+            </div>
+            <div class="info-row">
+                <div class="info-label">Terms and Conditions</div>
+                <div>{{ workshop_type.terms_and_conditions }}</div>
+            </div>
+        </div>
+    </section>
 {% endblock %}
-
-

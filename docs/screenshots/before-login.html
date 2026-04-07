@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Before Login</title>
+    <link rel="stylesheet" href="../../workshop_app/static/workshop_app/css/bootstrap.min.css">
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background: #ffffff;
+            color: #212529;
+        }
+
+        .navbar {
+            z-index: 1000;
+        }
+
+        .footer {
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+            background-color: #61615F;
+            color: white;
+            text-align: center;
+            z-index: 100;
+            padding: 0.75rem 1rem;
+        }
+
+        .base-content {
+            padding-top: 5em;
+            padding-bottom: 5em;
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar navbar-dark navbar-expand-lg bg-dark fixed-top">
+        <a class="navbar-brand text-white" href="#">FOSSEE Workshops</a>
+    </nav>
+
+    <div class="base-content">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-md-6 col-md-offset-6">
+                    <div class="card">
+                        <div class="card-body">
+                            <form class="px-3 py-3">
+                                <div class="form-group">
+                                    <label for="username">Username</label>
+                                    <input id="username" class="form-control" placeholder="Username">
+                                </div>
+                                <div class="form-group">
+                                    <label for="password">Password</label>
+                                    <input id="password" type="password" class="form-control" placeholder="Password">
+                                </div>
+                                <button type="button" class="btn btn-primary">Sign in</button>
+                            </form>
+                            <div class="dropdown-divider"></div>
+                            <a class="dropdown-item" href="#">New around here? Sign up</a>
+                            <a class="dropdown-item" href="#">Forgot password?</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer class="footer">
+        <div class="container">
+            Developed by FOSSEE group, IIT Bombay
+        </div>
+    </footer>
+</body>
+</html>
