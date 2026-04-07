@@ -48,34 +48,34 @@ I approached this by focusing on the pages that matter most in the coordinator j
 
 ### Before
 
-![Before mobile login screen](docs/screenshots/before-login.png)
+<img src="docs/screenshots/before-login.png" alt="Before mobile login screen" width="250">
 
 ### After
 
-![After mobile login screen](docs/screenshots/after-login.png)
+<img src="docs/screenshots/after-login.png" alt="After mobile login screen" width="250">
 
 ### More Mobile Screens
 
 #### Workshop Status
 
-![Coordinator mobile workshop status](docs/screenshots/coordinator-03-status.png)
+<img src="docs/screenshots/coordinator-03-status.png" alt="Coordinator mobile workshop status" width="250">
 
 #### Workshop Types List
 
-![Coordinator mobile workshop types list](docs/screenshots/coordinator-04-types-list.png)
+<img src="docs/screenshots/coordinator-04-types-list.png" alt="Coordinator mobile workshop types list" width="250">
 
 #### Workshop Type Details
 
-![Coordinator mobile workshop type details](docs/screenshots/coordinator-05-type-details.png)
+<img src="docs/screenshots/coordinator-05-type-details.png" alt="Coordinator mobile workshop type details" width="250">
 
 #### Propose Workshop
 
-![Coordinator mobile propose workshop](docs/screenshots/coordinator-06-propose.png)
+<img src="docs/screenshots/coordinator-06-propose.png" alt="Coordinator mobile propose workshop" width="250">
 
 #### Workshop Details And Comments
 
-![Coordinator mobile workshop details and comments](docs/screenshots/coordinator-07-workshop-details.png)
+<img src="docs/screenshots/coordinator-07-workshop-details.png" alt="Coordinator mobile workshop details and comments" width="250">
 
 #### Profile
 
-![Coordinator mobile profile](docs/screenshots/coordinator-08-profile.png)
+<img src="docs/screenshots/coordinator-08-profile.png" alt="Coordinator mobile profile" width="250">
