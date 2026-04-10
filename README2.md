@@ -48,34 +48,56 @@ I approached this by focusing on the pages that matter most in the coordinator j
 
 ### Before
 
-<img src="docs/screenshots/before-login.png" alt="Before mobile login screen" width="250">
+#### Login
+
+<img src="docs/screenshots/before changes/login.png" alt="Before login screen" width="250">
+
+#### Register
+
+<img src="docs/screenshots/before changes/register.png" alt="Before register screen" width="250">
+
+#### Coordinator Dashboard
+
+<img src="docs/screenshots/before changes/dashboard-coordinator.png" alt="Before coordinator dashboard screen" width="250">
+
+#### Workshop Types
+
+<img src="docs/screenshots/before changes/workshop-types.png" alt="Before workshop types screen" width="250">
+
+#### Propose Workshop
+
+<img src="docs/screenshots/before changes/propose-workshop.png" alt="Before propose workshop screen" width="250">
+
+#### Profile
+
+<img src="docs/screenshots/before changes/profile.png" alt="Before profile screen" width="250">
 
 ### After
 
-<img src="docs/screenshots/after-login.png" alt="After mobile login screen" width="250">
+<img src="docs/screenshots/after changes/after-login.png" alt="After mobile login screen" width="250">
 
 ### More Mobile Screens
 
 #### Workshop Status
 
-<img src="docs/screenshots/coordinator-03-status.png" alt="Coordinator mobile workshop status" width="250">
+<img src="docs/screenshots/after changes/coordinator-03-status.png" alt="Coordinator mobile workshop status" width="250">
 
 #### Workshop Types List
 
-<img src="docs/screenshots/coordinator-04-types-list.png" alt="Coordinator mobile workshop types list" width="250">
+<img src="docs/screenshots/after changes/coordinator-04-types-list.png" alt="Coordinator mobile workshop types list" width="250">
 
 #### Workshop Type Details
 
-<img src="docs/screenshots/coordinator-05-type-details.png" alt="Coordinator mobile workshop type details" width="250">
+<img src="docs/screenshots/after changes/coordinator-05-type-details.png" alt="Coordinator mobile workshop type details" width="250">
 
 #### Propose Workshop
 
-<img src="docs/screenshots/coordinator-06-propose.png" alt="Coordinator mobile propose workshop" width="250">
+<img src="docs/screenshots/after changes/coordinator-06-propose.png" alt="Coordinator mobile propose workshop" width="250">
 
 #### Workshop Details And Comments
 
-<img src="docs/screenshots/coordinator-07-workshop-details.png" alt="Coordinator mobile workshop details and comments" width="250">
+<img src="docs/screenshots/after changes/coordinator-07-workshop-details.png" alt="Coordinator mobile workshop details and comments" width="250">
 
 #### Profile
 
-<img src="docs/screenshots/coordinator-08-profile.png" alt="Coordinator mobile profile" width="250">
+<img src="docs/screenshots/after changes/coordinator-08-profile.png" alt="Coordinator mobile profile" width="250">
